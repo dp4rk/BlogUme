@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore the examples.txt file from rspec
+/spec/examples.txt
