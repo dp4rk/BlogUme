@@ -18,3 +18,6 @@
 
 # Ignore the examples.txt file from rspec
 /spec/examples.txt
+
+# Ignore the .project file from Aptana
+.project
