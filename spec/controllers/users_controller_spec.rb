@@ -29,7 +29,9 @@ RSpec.describe UsersController, type: :controller do
   }
   
   let(:invalid_attributes) {
-    {}
+    { :email => "notanemail",
+      :password => "fake"
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -43,7 +45,7 @@ RSpec.describe UsersController, type: :controller do
     it "assigns all users as @users" do
       user = User.create! valid_attributes
       get :index
-      expect(assigns(:users)).to eq([user])
+      expect(assigns(:users)).to eq(User.all)
     end
   end
 
