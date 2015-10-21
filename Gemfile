@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Devise for secure logins
 gem 'devise'
 
+gem 'foundation-rails'
+gem 'high_voltage'
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'
