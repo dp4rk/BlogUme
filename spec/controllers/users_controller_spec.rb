@@ -81,7 +81,7 @@ RSpec.describe UsersController, type: :controller do
       end
 
       it "assigns a newly created user as @user" do
-        post :create, {:user => valid_attributes}
+        user = post :create, {:user => valid_attributes}
         expect(assigns(:user)).to be_a(User)
         expect(assigns(:user)).to be_persisted
       end
@@ -115,7 +115,7 @@ RSpec.describe UsersController, type: :controller do
         user = User.create! valid_attributes
         put :update, {:id => user.to_param, :user => new_attributes}
         user.reload
-        skip("Add assertions for updated state")
+        expect(assigns(:user).email).to eq(new_attributes[:email])
       end
 
       it "assigns the requested user as @user" do
@@ -140,7 +140,7 @@ RSpec.describe UsersController, type: :controller do
 
       it "re-renders the 'edit' template" do
         user = User.create! valid_attributes
-        put :update, {:id => user.to_param, :user => invalid_attributes}
+        put :update, {:id => user.to_param, :user => invalid_attributes}, valid_session
         expect(response).to render_template("edit")
       end
     end
