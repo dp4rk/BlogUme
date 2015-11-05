@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is a project under development to create a simple pair of applications under the same domain.
 
-Things you may want to cover:
+Written using a TDD ideology using Rspec.
 
-* Ruby version
+Features planned to be implemented:
+-Email sending and receiving from application back-end
+-Google Analytics tracking
+-PDF generation from scratch
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Written in Ruby 2.2.2 and Rails 4.2.3 by Dave Park.
